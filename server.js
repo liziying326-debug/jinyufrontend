@@ -45,8 +45,8 @@ if (fs.existsSync(envFile)) {
 }
 
 // ── 腾讯云机器翻译兜底（MyMemory 用完后自动切换）────────────────────
-const TENCENT_SECRET_ID = process.env.TENCENT_SECRET_ID || 'REDACTED';
-const TENCENT_SECRET_KEY = process.env.TENCENT_SECRET_KEY || 'REDACTED';
+const TENCENT_SECRET_ID = process.env.TENCENT_SECRET_ID || '';
+const TENCENT_SECRET_KEY = process.env.TENCENT_SECRET_KEY || '';
 
 function sendTencentCloud(text, from, to, res) {
   if (!text || !text.trim()) {

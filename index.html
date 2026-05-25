@@ -99,7 +99,7 @@
 
 <!-- ========== HERO ========== -->
 <section class="hero">
-  <img src="/images/factory-hero.jpg" alt="Jin Yu Advertising Material Factory" class="hero-bg hero-bg-img" width="1920" height="1080" decoding="async" fetchpriority="high" />
+  <img id="heroBgImage" src="/images/factory-hero.jpg" alt="Jin Yu Advertising Material Factory" class="hero-bg hero-bg-img" width="1920" height="1080" decoding="async" fetchpriority="high" />
   <div class="hero-overlay"></div>
   <div class="hero-bokeh">
     <div class="bokeh-spot bokeh-1"></div>
@@ -134,7 +134,7 @@
           <span class="hero-stat-label" data-i18n="home.stats.clients" data-i18n-vi="Khách hàng toàn cầu">Global Clients</span>
         </div>
         <div class="hero-stat-item">
-          <span class="hero-stat-num hero-stat-iso">ISO <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" width="30" height="30" style="padding-right: 6px;margin-left: -6px;"><path d="M4 10.5L8.5 15L16 6" stroke="#FF7D00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="hero-stat-num">ISO <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" width="30" height="30" style="padding-right: 6px;margin-left: -6px;"><path d="M4 10.5L8.5 15L16 6" stroke="#FF7D00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           <span class="hero-stat-label" data-i18n="home.stats.qualityCertified" data-i18n-vi="Chứng nhận chất lượng">Quality Certified</span>
         </div>
       </div>
@@ -1124,6 +1124,12 @@ window.addEventListener('DOMContentLoaded', function() {
       if (imgUrl) {
         var img = document.getElementById('aboutMainImage');
         if (img) img.src = imgUrl;
+      }
+      
+      var heroBgUrl = d.company_image;
+      if (heroBgUrl) {
+        var heroImg = document.getElementById('heroBgImage');
+        if (heroImg) heroImg.src = heroBgUrl;
       }
       
       var capacityCardsKey = lang === 'en' ? 'capacity_cards' : ('capacity_cards_' + lang);
